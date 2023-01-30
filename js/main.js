@@ -4,7 +4,15 @@ let ex1Layer = document.getElementById("backgroundSplash");
 
 let _root = document.querySelector(':root');
 
-function transforms(x, y, el) {
+mouseOverContainer.addEventListener("mousemove", onPerspectiveTriggerMove);
+
+function transformElement(el, xyEl)
+{
+    transforms.apply(null, xyEl);
+}
+
+function transforms(x, y, el)
+{
     let box = el.getBoundingClientRect();
 
     ((x - (window.innerWidth / 2)) / window.innerWidth) * maxAngleDeg;
@@ -17,11 +25,8 @@ function transforms(x, y, el) {
     _root.style.setProperty("--bg-rotate-y", calcY+"deg");
 };
 
-function transformElement(el, xyEl) {
-    transforms.apply(null, xyEl);
-}
-
-mouseOverContainer.onmousemove = function (e) {
+function onPerspectiveTriggerMove(e)
+{
     let xy = [e.clientX, e.clientY];
     let position = xy.concat([ex1Layer]);
     window.requestAnimationFrame(function () {
