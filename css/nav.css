@@ -33,9 +33,15 @@ header{
 	width: 100%;
 	max-width:200px;
 	object-fit: contain;
-	position: absolute;
+	position: relative;
 	left: 0rem;
 	top: 10px;
+	pointer-events: none;
+}
+
+.logo span
+{
+	display:inline-block;
 }
 
 .logo object text
@@ -185,14 +191,17 @@ nav a:hover::after{
 		grid-column: 2 / span 1;
 		min-height:100px;
 		width:350px;
+		text-align: left;
+		padding:1rem;
 	}
 
 	.logo object,
 	.logo img{
 		width:100%;
 		max-width:280px;
-		top:20px;
-		left:2rem;
+		top:0;
+		left:0;
+		position:relative;
 	}
 
 	.logo div {

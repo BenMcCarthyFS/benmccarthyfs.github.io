@@ -2,7 +2,7 @@
 body {
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(5, 20vh);
-	background:hsl(0, 0%, 90%);
+	background:var(--clr-100);
 	padding-top:0;
 }
 
@@ -99,7 +99,7 @@ content{
 	font-family:Arial, Helvetica, sans-serif;
 	border-radius:0.5em;	
 	padding:3em;
-	color:white;
+	color:var(--clr-100);
 	line-height: 1.5rem;
 	background:var(--clr-600)
 }

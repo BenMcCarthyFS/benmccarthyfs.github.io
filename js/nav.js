@@ -1,7 +1,9 @@
 (function(){
     let _navBarText =   `<div class="logo">
                         <a href="/index.html">
-                        <object type="image/svg+xml" data="images/RCN_VF_Logo_20230217.svg"></object>`+
+                        <span>
+                        <object type="image/svg+xml" data="images/RCN_VF_Logo_20230217.svg"></object>
+                        </span>`+
                         /*<img src="images/RCN_VF_Logo_20230217.svg" alt="Alternate Text" />`+
                        /* <div>
                             RCN<br>Virtual Fleet<br />Centre
