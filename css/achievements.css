@@ -63,21 +63,6 @@
 }
 
 
-@media screen and (min-width:600px){
-    
-    .profile-header > img{
-        float:left;
-        margin-left: 1rem;
-        margin-top: 1rem;
-    }
-
-    .profile-name{
-        position:absolute;
-        left:150px;
-    }
-    
-}
-
 @media screen and (min-width:800px){
     .hero-container{
         grid-template-columns: 300px 1fr;
