@@ -1,0 +1,160 @@
+:root{
+    --clr-button: var(--clr-200);
+}
+
+*
+{
+    transition: background-color 300ms ease;
+}
+
+body
+{
+    background: linear-gradient(var(--clr-300), var(--clr-200) 350px) ;    
+    padding-top:100px;
+}
+
+.hero-container{
+    
+	font: 400 1em 'Roboto', sans-serif;
+    position:relative;
+    min-height:100%;
+    height:auto;
+    margin-bottom:50px;
+    display:grid;
+    padding:1em;
+
+    gap:1rem;  
+}
+
+.social-links,
+.updates{
+    
+    border-radius: 0.2em;
+    padding:1rem;
+    display:grid;
+    /* flex-direction: column; */
+    gap:0.8em;
+    align-self: start;
+}
+
+.updates
+{
+    gap: 1.4rem;
+    padding:0;
+}
+
+.social-links{
+    gap:2em;
+    background-color: var(--clr-100);
+    border-radius: 0.4rem;
+    grid-template-columns: repeat(4, 1fr);
+    position: sticky;
+    top: 4rem;
+}
+
+.update-card,
+.social-card{
+    width:100%;
+    background: var(--clr-100);
+    border-radius: 0.3rem;
+    grid-column:auto / span 1;
+    overflow:hidden;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem hsl(0 0% 0% / 0.35);
+}
+
+.update-card{
+    padding: 1rem;
+}
+
+.update-card > * + *
+{
+    padding-block-start: 1rem;
+}
+
+.social-card > h2, .social-card div
+{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.social-card div
+{
+    border-top: 1px solid black;
+    transition: background-color 250ms ease;
+}
+
+.social-card div:hover
+{
+    background-color: var(--clr-300);
+}
+
+a
+{
+    text-decoration: none;
+    color:inherit;
+}
+
+.social-card h2
+{
+    background: var(--clr-500);
+}
+
+
+@media screen and (min-width:600px){
+    
+    .profile-header > img{
+        float:left;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .profile-name{
+        position:absolute;
+        left:150px;
+    }
+    
+}
+
+@media screen and (min-width:800px){
+    .hero-container{
+        grid-template-columns: 1fr 200px;
+    }
+
+    .profile-header{
+        grid-column: 1 / 3;
+        grid-row: 1;
+        padding:1em;
+    }    
+
+    .profile-header > img{
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .updates{
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+    
+    .social-links{
+        grid-column: 2;
+        grid-row: 2;   
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:992px){
+
+    body{
+        padding-top:180px;
+    }
+
+    .hero-container{
+        /*width:992px;*/
+        max-width:1400px;
+        margin: 0 auto 50px auto;
+    }  
+}

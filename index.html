@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Fleet Centre</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/colourPicker.css">
+    <link rel="stylesheet" href="css/splash.css">
     <link rel="stylesheet" href="css/nav.css"/>
-    <script src="js/main.js" defer></script>
+
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <script src="js/main.js" defer></script>
 </head>
 <body>    
+    <script id="replace_with_colourPicker" src="/js/colourPicker.js"></script>
     <header>
         <script id="replace_with_navbar" src="js/nav.js"></script>
     </header>
@@ -23,9 +29,11 @@
     <div id="heroContainer">
         <div id="quickLaunch">
             <img src="images/sailor.png" alt="Alternate Text" />
-            <button>
-                Play Now
-            </button>
+            <a href="dashboard_home.html" >
+                <button>
+                    Play Now
+                </button>
+            </a>
         </div>
         <div id="tagline">
             <p>"Currently training a community of 14,256 members of the RCN"</p>

@@ -1,0 +1,39 @@
+.dashboard-nav > h2, .dashboard-nav div
+{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.dashboard-nav a + * div
+{
+    border-top: 1px solid black;
+    transition: background-color 250ms ease;
+}
+
+.dashboard-nav div:hover,
+.dashboard-nav div[data-state=active]
+{
+    background-color: var(--clr-500);    
+    color: var(--fc-light-400);
+}
+
+.dashboard-nav p
+{
+    display:inline-block;
+}
+
+.dashboard-nav a
+{
+    text-decoration: none;
+}
+
+.dashboard-nav h2
+{
+    background: var(--clr-500);
+}
+
+.dashboard-nav i
+{
+    margin-inline: 1rem;
+    width: 1.25em;
+}

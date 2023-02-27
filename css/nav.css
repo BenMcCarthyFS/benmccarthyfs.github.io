@@ -12,11 +12,11 @@ header{
 .logo{
 	position:relative;
 	min-height:100px;
-	width:170px;
+	width:237px;
 	margin: 0 auto;
 	z-index:20;
 }
-
+/*
 .logo div{
 	text-align:left;
 	width:fit-content;
@@ -26,15 +26,21 @@ header{
 	font-family:Impact;
 	font-size:1.1em;
 	color:white;
-}
+}*/
 
+.logo object,
 .logo img {
-	width: 80px;
-	height: 80px;
+	width: 100%;
+	max-width:200px;
 	object-fit: contain;
 	position: absolute;
-	left: 0;
+	left: 0rem;
 	top: 10px;
+}
+
+.logo object text
+{
+	stroke:hsl(0 50% 50%);
 }
 
 .nav-toggle{
@@ -171,29 +177,32 @@ nav a:hover::after{
 
 	header {
 		display: grid;
-		grid-template-columns: 1fr auto minmax(600px, 5fr) 1fr 1fr;
+		grid-template-columns: 1fr auto minmax(600px, 1050px) 1fr;
 		background-color: hsla(0, 0%, 0%,0%);
 	}
 
 	.logo{
 		grid-column: 2 / span 1;
 		min-height:100px;
-		width:330px;
+		width:350px;
 	}
 
+	.logo object,
 	.logo img{
-		width:150px;
-		height:150px;
+		width:100%;
+		max-width:280px;
 		top:20px;
+		left:2rem;
 	}
 
 	.logo div {
 		font-size:2em;
+
 	}
 
 	nav {
 		all: unset;
-		grid-column: 3 / 5;
+		grid-column: 3 / 4;
 		display:flex;
 		justify-content: flex-end;
 		align-items:center;
