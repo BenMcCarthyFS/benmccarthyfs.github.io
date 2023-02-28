@@ -14,8 +14,8 @@
                     <nav>
                         <ul>
                             <li><a href="">Add Ons</a></li>
-                            <li><a href="">Community</a></li>
-                            <li><a href="">Help</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="help.html">Help</a></li>
                             <li><a href="loginSignUp.html">Login</a></li>
                         </ul>
                     </nav>
