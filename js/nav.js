@@ -13,9 +13,9 @@
                     <input type="checkbox" id="nav-toggle" class="nav-toggle" value="" />
                     <nav>
                         <ul>
-                            <li><a href="">Download</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Language</a></li>
+                            <li><a href="">Add Ons</a></li>
+                            <li><a href="">Community</a></li>
+                            <li><a href="">Help</a></li>
                             <li><a href="loginSignUp.html">Login</a></li>
                         </ul>
                     </nav>

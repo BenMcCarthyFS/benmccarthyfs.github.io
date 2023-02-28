@@ -160,6 +160,8 @@ ol
     object-fit: cover;;
     width:125px;
     height:125px;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
 }
 
 .course-details
@@ -175,14 +177,19 @@ ol
 .course-details img
 {
 	height: auto;
-	min-height:300px;
 	object-fit: contain;
 	min-width:100%;
+	max-width:100%;
 }
 
 .description p
 {
 	margin-block:1rem;
+}
+
+.description
+{
+	padding: 0.6rem;
 }
 
 .course-details ul> * + *
@@ -299,11 +306,13 @@ footer{
 
     .profile-header > img{
         float:left;
+		margin: 0;
     }
 
     .profile-name{
         position:absolute;
         left:150px;
+		right: 300px;
     }
     
 }

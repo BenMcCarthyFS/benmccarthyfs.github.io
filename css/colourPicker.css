@@ -111,7 +111,7 @@ input[type="radio"]#theme2
 
 input[type="radio"]#theme3
 {
-	--radio-colour: red;
+	--radio-colour: hsl(202 53% 31%);
 }
 
 input[type="radio"]#theme4

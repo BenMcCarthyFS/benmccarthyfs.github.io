@@ -12,12 +12,6 @@
 
     <label for="theme" class="visually-hidden">Theme 3</label>
     <input type="radio" name="theme" id="theme3" >
-
-    <label for="theme" class="visually-hidden">Theme 4</label>
-    <input type="radio" name="theme" id="theme4" >
-
-    <label for="theme" class="visually-hidden">Theme 5</label>
-    <input type="radio" name="theme" id="theme5" >
     
     <input type="checkbox" name="dark" id="darkmode" class="visually-hidden" > 
     <label for="darkmode" class="dark-toggle"><span></span></label>

@@ -16,6 +16,9 @@ body
     color:white;
     background:var(--clr-500);
     border-radius: 0.5em;
+    
+    font-size: 1.4em;
+    font-weight: 400;
 }
 
 .profile-header > img
@@ -26,8 +29,14 @@ body
 
 .profile-name{
     padding:1em;
-    font-size: 1.4em;
-    font-weight: 400;
+}
+
+.profile-details
+{
+    float: right;
+    padding:1rem;
+    font-size: 1rem;
+    width:300px;
 }
 
 .profile-header > img{
