@@ -18,19 +18,19 @@
         <p>Achievements</p>
         </div>
     </a>
-    <a href="#" class="font-dark">
+    <a href="avatar.html" class="font-dark">
         <div data-name='avatar'>
         <i class="fa-solid fa-user fa-xl fa-fw"></i>
         <p>Avatar</p>
         </div>
     </a>
-    <a href="#" class="font-dark">
+    <a href="calendar.html" class="font-dark">
         <div data-name='calendar'>
         <i class="fa-solid fa-calendar fa-xl fa-fw"></i>
         <p>Calendar</p>
         </div>
     </a>
-    <a href="#" class="font-dark">
+    <a href="inbox.html" class="font-dark">
         <div data-name='inbox'>
         <i class="fa-solid fa-envelope fa-xl fa-fw"></i>
         <p>Inbox</p>

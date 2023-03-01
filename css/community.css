@@ -39,7 +39,7 @@ body
 
 .updates
 {
-    gap: 1.4rem;
+    gap: 1rem;
     padding:0;
 }
 
@@ -55,7 +55,7 @@ body
 .update-card,
 .social-card{
     width:100%;
-    background: var(--clr-100);
+    background: var(--clr-200);
     border-radius: 0.3rem;
     grid-column:auto / span 1;
     overflow:hidden;
@@ -136,12 +136,12 @@ a
         grid-template-rows: unset;
 
         grid-column: 1 / span 1;
-        grid-row: 2;
+        grid-row: 1;
     }
     
     .social-links{
         grid-column: 2;
-        grid-row: 2;   
+        grid-row: 1;   
         grid-template-columns: 1fr;
     }
 }
