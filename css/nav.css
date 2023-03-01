@@ -82,7 +82,8 @@ nav a{
 	transition: color 100ms ease-in-out;
 }
 
-nav a:hover {
+nav a:hover,
+nav a[data-state='active'] {
 	color:hsla(0, 0%, 20%, 100%);
 }
 
@@ -100,7 +101,8 @@ nav a::after{
 	transition: transform 350ms ;
 }
 
-nav a:hover::after{    
+nav a:hover::after,
+nav a[data-state='active']::after{    
 	transform-origin: left;
 	transform: scale(1, 1);
 	opacity:0.3;	

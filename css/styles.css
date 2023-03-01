@@ -48,6 +48,74 @@ h2
 	gap: 2rem;
 }
 
+.addons
+{
+	grid-template-columns: 300px 1fr;
+}
+
+.addons .side
+{
+	position: sticky;
+	top: 4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-self: start;
+}
+
+.addons .main
+{
+	display:grid;
+	gap:1rem;
+}
+
+.addons .main > h2,
+.addons .main > form
+{
+	grid-column: 1 / -1;
+}
+
+.addons .main > form
+{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 1rem;
+}
+
+.addons .main > form input
+{
+	padding: 0.4rem 1rem;
+	font-size: 0.9rem;
+}
+
+.addons .main > .large-card
+{
+	padding: 1rem;
+}
+
+.addons-list
+{
+	display:flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.addon-card
+{
+	display:grid;
+	grid-template-columns: 200px 1fr;
+	gap:1rem;
+	min-height:140px;
+}
+
+.addon-card img
+{
+	width: 100%;
+	min-height:100%;
+	background-color:hsl(0 0% 50% / 0.3);
+	border-radius: 0.3rem;
+}
+
 .large-card{
     width:100%;
     background: var(--clr-200);
@@ -152,6 +220,9 @@ ol
     color:white;
     background:var(--clr-500);
     border-radius: 0.5em;
+    
+    font-size: 1.4em;
+    font-weight: 400;
 }
 
 .profile-header > img
@@ -162,13 +233,19 @@ ol
 
 .profile-name{
     padding:1em;
-    font-size: 1.4em;
-    font-weight: 400;
+}
+
+.profile-details
+{
+    float: right;
+    padding:1rem;
+    font-size: 1rem;
+    width:300px;
 }
 
 .profile-header > img{
     max-width:100%;
-    object-fit: cover;;
+    object-fit: cover;
     width:125px;
     height:125px;
 	margin-left: 1rem;
@@ -369,6 +446,16 @@ footer{
         margin-top: 0;
     }
 
+	.profile-stats{
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+    }
+    
+    .profile-activity{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
 }
 
 @media screen and (min-width:992px){
@@ -381,4 +468,10 @@ footer{
         /*width:992px;*/
         max-width:1400px;
     }  
+
+	.profile-activity
+    {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
