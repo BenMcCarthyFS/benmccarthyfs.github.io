@@ -34,6 +34,8 @@ const _colourReset = false;
         <input type="color" name="clr-600" id="clr-600" data-id="6">
     </span>
 
+    <button id="palette-reset">RESET</button>
+
     <span class="flex-row">
         <label for="theme" class="visually-hidden">Theme 1</label>
         <input type="radio" name="theme" id="theme1" data-id='1' checked>
@@ -54,6 +56,8 @@ _pickerForm.id = "pickerForm";
 _pickerForm.classList.add("colour-picker");
 _pickerForm.innerHTML = _colourPicker;
 
+_pickerForm.querySelector("#palette-reset").addEventListener("click", PaletteReset);
+
 _pickerForm.querySelectorAll("input[type='color']").forEach((input) => {
     input.addEventListener("input", NewColourPicked, false);
   });
@@ -70,13 +74,17 @@ if(_colourReset)
     }
 }
 
-
-
 let _oldElement = document.querySelector("script#replace_with_colourPicker");
 _oldElement.replaceWith(_pickerForm);
 })();
 
+function PaletteReset(e)
+{
+    e.preventDefault();
+    savedPalette = palettes[paletteID][( darkmode.checked ? "Dark" : "Light")];
 
+    LoadPalette(savedPalette);
+}
 
 const LightColourNames = [  
                             "--clr-light-100",
