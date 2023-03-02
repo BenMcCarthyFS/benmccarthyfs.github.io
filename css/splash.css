@@ -2,7 +2,6 @@
 body {
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(5, 20vh);
-	background:var(--clr-100);
 	padding-top:0;
 }
 
@@ -101,14 +100,14 @@ content{
 	font-family:Arial, Helvetica, sans-serif;
 	border-radius:0.5em;	
 	padding:3em;
-	color:var(--clr-100);
+	color: var(--fc-light-400);
 	line-height: 1.5rem;
 	background:var(--clr-600)
 }
 
 content:nth-child(odd){
-	color:hsl(239, 31%, 30%);
-	background:white;
+	color: var(--fc-dark-400);
+	background: var(--clr-100);
 }
 
 footer{

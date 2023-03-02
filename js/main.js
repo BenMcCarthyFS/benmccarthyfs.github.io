@@ -18,7 +18,7 @@ function transforms(x, y, el)
     let calcX = ((y - (window.innerHeight / 2)) / window.innerHeight) * maxAngleDeg;
     let calcY = -((x - (window.innerWidth / 2)) / window.innerWidth) * maxAngleDeg;
 
-    console.log(calcX, calcY)
+    //console.log(calcX, calcY)
 
     _root.style.setProperty("--bg-rotate-x", calcX+"deg");
     _root.style.setProperty("--bg-rotate-y", calcY+"deg");

@@ -1,11 +1,25 @@
 :root
 {
-    --clr-100: hsl(0 0% 100%);
-	--clr-200: hsl(0 0% 80%);
-	--clr-300: hsl(0 0% 65%);
-	--clr-400: hsl(0 0% 50%);
-	--clr-500: hsl(0 0% 35%);
-	--clr-600: hsl(0 0% 20%);
+	--clr-light-100: hsl(0 0% 100%);
+	--clr-light-200: hsl(0 0% 80%);
+	--clr-light-300: hsl(0 0% 65%);
+	--clr-light-400: hsl(0 0% 50%);
+	--clr-light-500: hsl(0 0% 35%);
+	--clr-light-600: hsl(0 0% 20%);
+
+	--clr-dark-100: hsl(0 0% 100%);
+	--clr-dark-200: hsl(0 0% 80%);
+	--clr-dark-300: hsl(0 0% 65%);
+	--clr-dark-400: hsl(0 0% 50%);
+	--clr-dark-500: hsl(0 0% 35%);
+	--clr-dark-600: hsl(0 0% 20%);
+
+	--clr-100: var(--clr-light-100);
+	--clr-200: var(--clr-light-200);
+	--clr-300: var(--clr-light-300);
+	--clr-400: var(--clr-light-400);
+	--clr-500: var(--clr-light-500);
+	--clr-600: var(--clr-light-600);
 
 	--primary-text-colour: #0094ff;
 
@@ -25,6 +39,8 @@
 	top:50%;
 	transform: translateY(-50%);
 	overflow: hidden;
+	
+	font: 1em 'Roboto', sans-serif;
 }
 
 .colour-picker > fieldset
@@ -32,7 +48,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.4rem;
-	width:fit-content;
+	width:8rem;
 	background: hsl(0 0% 100% / 0.8);
 	padding: 2rem 1rem;
 	margin-inline: auto;
@@ -42,7 +58,8 @@
 	transition: margin-left 250ms ease;
 }
 
-.colour-picker:hover > fieldset
+.colour-picker:hover > fieldset,
+.colour-picker:focus-within > fieldset
 {
 	margin-left:0;
 }
@@ -60,6 +77,11 @@
 	cursor: pointer;
 }
 
+.colour-picker input[type='color']
+{
+	width:100%;
+}
+
 .dark-toggle{
 	display:flex;
 	align-items:center;
@@ -67,6 +89,7 @@
 	padding: 0.5rem;
 	border-radius: 25%;
 	border: 2px solid black;
+	align-self: center;
 }
 
 .dark-toggle::before
@@ -92,6 +115,12 @@
     border: 3px solid orange;
 }
 
+.flex-row
+{
+	display:flex;
+	gap: 1rem;
+}
+
 #darkmode:checked ~ .dark-toggle span
 {
 	background: black;
@@ -114,199 +143,22 @@ input[type="radio"]#theme3
 	--radio-colour: hsl(202 53% 31%);
 }
 
-input[type="radio"]#theme4
-{
-	--radio-colour: red;
-}
-
-input[type="radio"]#theme5
-{
-	--radio-colour: red;
-}
-
 input[type="radio"]:checked
 {
 	background-color: var(--radio-colour);
 }
 
-:root:has(#theme1:checked)
-{
-	--clr-100: hsl(0 0% 100%);
-	--clr-200: hsl(0 0% 90%);
-	--clr-300: hsl(0 0% 65%);
-	--clr-400: hsl(0 0% 50%);
-	--clr-500: hsl(0 0% 35%);
-	--clr-600: hsl(0 0% 20%);
-}
-
-.theme1
-{
-	--clr-100: hsl(0 0% 100%);
-	--clr-200: hsl(0 0% 90%);
-	--clr-300: hsl(0 0% 65%);
-	--clr-400: hsl(0 0% 50%);
-	--clr-500: hsl(0 0% 35%);
-	--clr-600: hsl(0 0% 20%);
-}
-
-:root:has(#theme1:checked):has(#darkmode:checked)
-{
-	--clr-600: hsl(0 0% 100%);
-	--clr-500: hsl(0 0% 35%);
-	--clr-400: hsl(0 0% 65%);
-	--clr-300: hsl(0 0% 30%);
-	--clr-200: hsl(0 0% 15%);
-	--clr-100: hsl(0 0% 20%);
-
-    --fc-light-400: var(--clr-600)
-}
-
+:root.dark,
 .theme1.dark
 {
-	--clr-600: hsl(0 0% 100%);
-	--clr-500: hsl(0 0% 35%);
-	--clr-400: hsl(0 0% 65%);
-	--clr-300: hsl(0 0% 30%);
-	--clr-200: hsl(0 0% 15%);
-	--clr-100: hsl(0 0% 20%);
+	--clr-100: var(--clr-dark-100);
+	--clr-200: var(--clr-dark-200);
+	--clr-300: var(--clr-dark-300);
+	--clr-400: var(--clr-dark-400);
+	--clr-500: var(--clr-dark-500);
+	--clr-600: var(--clr-dark-600);
 
-    --fc-light-400: var(--clr-600)
-}
-
-:root:has(#theme2:checked)
-{
-	/*--clr-100: hsl(0 0% 20%);
-	--clr-200: hsl(41 100% 53%);
-	--clr-300: hsl(0 0% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);*/
-
-    --clr-200: hsl(0 0% 100%);
-	--clr-100: hsl(41 40% 95%);
-	--clr-300: hsl(208 64% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
-}
-
-.theme2
-{
-    --clr-200: hsl(0 0% 100%);
-	--clr-100: hsl(41 40% 95%);
-	--clr-300: hsl(208 64% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
-}
-
-:root:has(#theme2:checked):has(#darkmode:checked)
-{
-	--clr-400: hsl(0 0% 100%);
-	--clr-600: hsl(41 40% 95%);
-	--clr-200: hsl(208 44% 10%);
-	--clr-100: hsl(0 0% 20%);
-	--clr-300: hsl(208 74% 32%);
-	--clr-500: hsl(211 60% 23%);
-    
-    --fc-light-400: var(--clr-600);
-}
-
-.theme2.dark
-{
-	--clr-400: hsl(0 0% 100%);
-	--clr-600: hsl(41 40% 95%);
-	--clr-200: hsl(208 44% 10%);
-	--clr-100: hsl(0 0% 20%);
-	--clr-300: hsl(208 74% 32%);
-	--clr-500: hsl(211 60% 23%);
-    
-    --fc-light-400: var(--clr-600);
-}
-
-
-
-
-:root:has(#theme3:checked)
-{
-    --clr-200: hsl(0 0% 100%);
-	--clr-100: hsl(53 12% 90%);
-	--clr-300: hsl(208 44% 60%);
-	--clr-500: hsl(208 56% 19%);
-	--clr-400: hsl(201 27% 79%);
-	--clr-600: hsl(202 53% 31%);
-}
-
-.theme3
-{
-    --clr-200: hsl(0 0% 100%);
-	--clr-100: hsl(53 12% 90%);
-	--clr-300: hsl(208 44% 60%);
-	--clr-500: hsl(208 56% 19%);
-	--clr-400: hsl(201 27% 79%);
-	--clr-600: hsl(202 53% 31%);
-}
-
-:root:has(#theme3:checked):has(#darkmode:checked)
-{
-	--clr-400: hsl(0 0% 100%);
-	--clr-600: hsl(53 12% 83%);
-	--clr-200: hsl(208 64% 20%);
-	--clr-300: hsl(208 56% 19%);
-	--clr-500: hsl(201 27% 29%);
-	--clr-100: hsl(202 53% 31%);
-    
-    --fc-light-400: var(--clr-600);
-}
-
-.theme3.dark
-{
-	--clr-400: hsl(0 0% 100%);
-	--clr-600: hsl(53 12% 83%);
-	--clr-200: hsl(208 64% 20%);
-	--clr-300: hsl(208 56% 19%);
-	--clr-500: hsl(201 27% 29%);
-	--clr-100: hsl(202 53% 31%);
-    
-    --fc-light-400: var(--clr-600);
-}
-
-
-
-:root:has(#theme4:checked)
-{
-	--clr-200: hsl(41 100% 53%);
-	--clr-300: hsl(0 0% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
-}
-
-:root:has(#theme4:checked):has(#darkmode:checked)
-{
-	--clr-200: hsl(41 100% 53%);
-	--clr-300: hsl(0 0% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
-}
-
-
-
-:root:has(#theme5:checked)
-{
-	--clr-200: hsl(41 100% 53%);
-	--clr-300: hsl(0 0% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
-}
-
-:root:has(#theme5:checked):has(#darkmode:checked)
-{
-	--clr-200: hsl(41 100% 53%);
-	--clr-300: hsl(0 0% 60%);
-	--clr-400: hsl(0 0% 20%);
-	--clr-500: hsl(208 74% 52%);
-	--clr-600: hsl(211 100% 23%);
+    --fc-light-400: var(--clr-300);
+	
+	--fc-dark-400: var(--clr-600);
 }
