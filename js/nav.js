@@ -1,8 +1,7 @@
 (function(){
     let _navBarText =   `<div class="logo">
                         <a href="/index.html">
-                        <span>
-                        <object type="image/svg+xml" data="images/RCN_VF_Logo_20230301_Light_Expanded.svg"></object>
+                        <span>                        
                         </span>`+
                         /*<img src="images/RCN_VF_Logo_20230217.svg" alt="Alternate Text" />`+
                        /* <div>
@@ -13,6 +12,7 @@
                     <input type="checkbox" id="nav-toggle" class="nav-toggle" value="" />
                     <nav>
                         <ul>
+                            <li><a href="index.html" data-name='home'>Home</a></li>
                             <li><a href="addOns.html" data-name='addons'>Add Ons</a></li>
                             <li><a href="community.html" data-name='community'>Community</a></li>
                             <li><a href="help.html" data-name='help'>Help</a></li>
@@ -27,6 +27,11 @@
 let _navWrapper = document.createElement("header");
 _navWrapper.innerHTML = _navBarText;
 
+let _logoLoader = document.createElement("script");
+    _logoLoader.dataset.id = "RCN_VF_Logo_20230301_Light_Expanded";
+    _logoLoader.src = "/js/SVGInsert.js";
+
+_navWrapper.querySelector("span").appendChild(_logoLoader);
 
 let _oldElement = document.querySelector("script#replace_with_navbar");
 
