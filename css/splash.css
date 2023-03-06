@@ -54,11 +54,11 @@ body {
 
 #quickLaunch button {	
 	border-radius: 0.3rem;	
-	width: 14rem;
+	width: 18rem;
 	padding: 0.4rem;
 	color: white;
 	background-color: #099da8;
-	font: bold 1.6em 'Roboto', sans-serif;
+	font: bold 1.2em 'Roboto', sans-serif;
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: background-color 150ms ease-out;

@@ -6,10 +6,10 @@
         <p>Dashboard</p>
         </div>
     </a>
-    <a href="course_progress.html" class="font-dark">
+    <a href="activity_progress.html" class="font-dark">
         <div data-name='courses'>
         <i class="fa-solid fa-chalkboard-user fa-xl fa-fw"></i>
-        <p>Courses</p>
+        <p>Activities</p>
         </div>
     </a>
     <a href="achievements.html" class="font-dark">

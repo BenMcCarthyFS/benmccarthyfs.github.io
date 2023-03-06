@@ -1,7 +1,8 @@
 (function(){
     let _navBarText =   `<div class="logo">
                         <a href="/index.html">
-                        <span>                        
+                        <span>  
+                            <p>Sailors' Learning Portal</p>                      
                         </span>`+
                         /*<img src="images/RCN_VF_Logo_20230217.svg" alt="Alternate Text" />`+
                        /* <div>
@@ -13,7 +14,7 @@
                     <nav>
                         <ul>
                             <li><a href="index.html" data-name='home'>Home</a></li>
-                            <li><a href="addOns.html" data-name='addons'>Add Ons</a></li>
+                            <li><a href="learningTools.html" data-name='addons'>Learning Tools</a></li>
                             <li><a href="community.html" data-name='community'>Community</a></li>
                             <li><a href="help.html" data-name='help'>Help</a></li>
                             <li><a href="loginSignUp.html" data-name='login'>Login</a></li>
@@ -31,7 +32,7 @@ let _logoLoader = document.createElement("script");
     _logoLoader.dataset.id = "RCN_VF_Logo_20230301_Light_Expanded";
     _logoLoader.src = "/js/SVGInsert.js";
 
-_navWrapper.querySelector("span").appendChild(_logoLoader);
+//_navWrapper.querySelector("span").appendChild(_logoLoader);
 
 let _oldElement = document.querySelector("script#replace_with_navbar");
 
