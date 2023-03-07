@@ -55,12 +55,11 @@ h2
 
 .addons
 {
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 1fr;
 }
 
 .addons .side
 {
-	position: sticky;
 	top: 4rem;
 	display: flex;
 	flex-direction: column;
@@ -466,6 +465,16 @@ footer{
 		grid-template-columns: repeat(3, 1fr);
 		max-width: 1400px;
 		gap: 2rem;
+	}
+
+	.addons
+	{
+		grid-template-columns: 300px 1fr;
+	}
+
+	.addons .side
+	{
+		position: sticky;
 	}
 
 	.helpTopics
