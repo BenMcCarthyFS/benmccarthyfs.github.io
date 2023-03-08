@@ -14,6 +14,7 @@ function validateLogin(e)
     console.log(_loginForm.user.value, _loginForm.password.value);
     if(_loginForm.user.value.length > 3 && _loginForm.password.value.length > 5)
     {
+        sessionStorage.setItem("user",_loginForm.user.value);
         return;
     }
 

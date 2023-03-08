@@ -36,12 +36,19 @@
         <p>Inbox</p>
         </div>
     </a>
+    <a href="index.html" class="font-dark">
+        <div data-name='logout'>
+        <i class="fa-solid fa-envelope fa-xl fa-fw"></i>
+        <p>Logout</p>
+        </div>
+    </a>
     `;
 
     let _dashWrapper = document.createElement("div");
         _dashWrapper.classList.add("dashboard-nav", "groups", "large-card");
         _dashWrapper.innerHTML = _dashboard_nav;
 
+    _dashWrapper.querySelector(`[href="index.html"]`).addEventListener("click",function(){sessionStorage.clear("user")});
 
     let _oldElement = document.querySelector("script#replace_with_dashnav");
 

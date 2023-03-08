@@ -12,9 +12,17 @@ header{
 .logo{
 	position:relative;
 	min-height:100px;
-	width:237px;
+	/*width:237px;*/
+	width: 24rem;
 	margin: 0 auto;
 	z-index:20;
+	display:flex;
+}
+
+.logo a
+{
+	justify-self:center;
+	align-self: center;
 }
 /*
 .logo div{
@@ -53,7 +61,7 @@ header{
 	text-transform: uppercase;
 	cursor: pointer;
 	color:var(--clr-400);
-	width: 12rem;
+	width: 24rem;
 }
 
 .logo svg #text path
@@ -82,6 +90,24 @@ nav ul{
 	padding:0;
 	list-style:none;	
 	margin:1em 1em;
+	display:flex;
+	flex-direction: column;
+	justify-items:end;
+}
+
+nav li a
+{
+	bottom:0;
+}
+
+nav li > a *
+{
+	vertical-align: bottom;
+}
+
+nav li > a * + *
+{
+	margin-left: 0.4rem;
 }
 
 nav a{
@@ -191,6 +217,17 @@ nav a[data-state='active']::after{
 	background-color:hsl(0 0% 100% / 0);
 }
 
+
+.userIcon
+{
+	width:2.4rem;
+	height:2.4rem;
+	border-radius: 50%;
+	background-color:red;
+	border:0;
+	object-fit: cover;
+}
+
 @media screen and (min-width: 992px){
 
 	.nav-toggle-label{
@@ -247,7 +284,10 @@ nav a[data-state='active']::after{
 
 	nav ul {
 		display:flex;
+		
+		flex-direction: row;
 		justify-content:flex-end;
+		align-items: flex-end;
 	}
 
 	nav li{

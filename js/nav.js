@@ -2,7 +2,7 @@
     let _navBarText =   `<div class="logo">
                         <a href="/index.html">
                         <span>  
-                            <p>Sailors' Learning Portal</p>                      
+                            <p>Sailors' Activity Centre</p>                      
                         </span>`+
                         /*<img src="images/RCN_VF_Logo_20230217.svg" alt="Alternate Text" />`+
                        /* <div>
@@ -17,7 +17,6 @@
                             <li><a href="learningTools.html" data-name='addons'>Learning Tools</a></li>
                             <li><a href="community.html" data-name='community'>Community</a></li>
                             <li><a href="help.html" data-name='help'>Help</a></li>
-                            <li><a href="loginSignUp.html" data-name='login'>Login</a></li>
                         </ul>
                     </nav>
                     <label for="nav-toggle" class="nav-toggle-label">
@@ -31,6 +30,18 @@ _navWrapper.innerHTML = _navBarText;
 let _logoLoader = document.createElement("script");
     _logoLoader.dataset.id = "RCN_VF_Logo_20230301_Light_Expanded";
     _logoLoader.src = "/js/SVGInsert.js";
+
+let _userLoginItem = document.createElement("li");
+
+_navWrapper.querySelector("ul").appendChild(_userLoginItem);
+
+if(sessionStorage.getItem("user"))
+{
+    _userLoginItem.innerHTML = `<a href="dashboard_home.html" data-name='user'><span>${sessionStorage.getItem('user')}</span><img src="images/RCN_VF_Logo_20230217.svg" class='userIcon' /></a>`;
+}else
+{
+    _userLoginItem.innerHTML = `<a href="loginSignUp.html" data-name='login'>Login</a>`;
+}
 
 //_navWrapper.querySelector("span").appendChild(_logoLoader);
 
