@@ -240,6 +240,16 @@ nav a[data-state='active']::after{
 		background-color: hsla(0, 0%, 0%,0%);
 	}
 
+	header.loginNav
+	{
+		grid-template-columns: 1fr;
+	}
+
+	header.loginNav .logo
+	{
+		grid-column: 1 / -1;
+	}
+
 	.logo{
 		grid-column: 2 / span 1;
 		min-height:100px;
