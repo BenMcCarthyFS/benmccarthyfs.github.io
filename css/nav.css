@@ -36,6 +36,8 @@ header{
 	color:white;
 }*/
 
+
+
 .logo object,
 .logo img,
 .logo svg {
@@ -302,6 +304,139 @@ nav a[data-state='active']::after{
 
 	nav li{
 		padding:1em 0.5em;
+		position:relative;
+	}
+
+	*:hover > .hover-list
+	{
+		display: block;
+		opacity: 1;
+		
+		pointer-events:all;
+	}
+
+	.hover-list
+	{
+		transition: opacity 150ms ease;
+		opacity: 0;
+		position: absolute;
+		background-color: var(--clr-500);
+		top:calc(100% - 1rem);
+		padding:0;
+		margin:0;
+		pointer-events: none;
+		padding:0.4rem;		
+		box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem hsl(0 0% 0% / 0.25);
+		min-width:300px;
+	}
+
+	.align-right
+	{
+		right:1rem;
+		
+	}
+
+	.hover-list ul, .hover-list li
+	{
+		margin:0;
+		padding:0;
+		gap:0;
+	}
+
+	.hover-list ul
+	{
+		flex-direction: column;
+		align-items: start;
 	}
 }
 
+
+
+.hover-list li
+{
+	transition: background-color 150ms ease;
+	width:100%;
+	text-align: left;
+}
+
+.hover-list li:hover
+{
+	background-color: var(--clr-600);
+}
+
+.hover-list a span
+{
+	display: inline-block;
+	width:100%;
+}
+
+.button {
+	display: inline-block;
+	margin: 4px 2px;
+	font-size: 14px;
+	height: 2rem;
+	width: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.searchGlass
+{
+	display:inline-block;
+	rotate: -45deg;
+	font-size: 2rem;
+	color: white;
+}
+
+
+.search {
+	position: absolute;
+	border:0;
+	border-bottom: 2px solid white;
+	opacity:0;
+	color: white;
+	outline: 0;
+	background-color: transparent;
+	padding: 0;
+	width: 0;
+	height: 2rem;
+	z-index: 10;
+	transition: width 400ms ease, opacity 200ms ease;
+	bottom:0;
+	font-size:1rem;
+}
+
+nav i.fa-xl
+{
+	line-height: inherit;
+	vertical-align: 0;
+}
+
+.search-container
+{
+	position:relative;
+
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+	opacity:1;
+}
+
+.expandRight {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandRight:focus {
+	padding: 0 0 0 16px;
+}

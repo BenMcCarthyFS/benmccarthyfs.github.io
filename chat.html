@@ -8,8 +8,9 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="/css/styles.css">  
-    <link rel="stylesheet" href="/css/nav.css"/>
+    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/colourPicker.css">
+    <link rel="stylesheet" href="/css/dashboard_nav.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +20,17 @@
 </head>
 <body>
     <script id="replace_with_colourPicker" src="/js/colourPicker.js"></script>
-    <script id="replace_with_navbar" data-name='help' src="/js/nav.js"></script>
-    <div class="search-card hero-container font-dark">
-        <form action="">
-            <input type="text" name="questionSearch" id="questionSearch" placeholder="Type in a question">
-            <button type="submit">Search</button>
-        </form>
-        <div class="searchResults large-card">
-            <h2>Results</h2>
-            <div class="large-card">Test stuff</div>
-            <div class="large-card">Test stuff</div>
-            <div class="large-card">Test stuff</div>
-            <div class="large-card">Test stuff</div>
-            <div class="large-card">Test stuff</div>
-            <div class="large-card">Test stuff</div>
-
+    <script id="replace_with_navbar" src="/js/nav.js"></script>
+    <div class="hero-container">
+        <script src="/js/profileBar.js"></script>
+        <div class="profile-stats">
+        </div>
+        <div class="course-details font-dark">
+            <h2>Chat</h2>
+            
         </div>
     </div>
     <footer>
     </footer>
-    </html>
 </body>
+</html>

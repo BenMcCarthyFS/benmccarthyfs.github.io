@@ -196,12 +196,15 @@ ol
 	padding:1rem;
 }
 
+.search-card > h2,
+.search-card > form,
 .help > h2,
 .help > form
 {
 	grid-column: 1 / -1;
 }
 
+.search-card > form,
 .help > form
 {
 	display: grid;
@@ -209,15 +212,29 @@ ol
 	gap: 1rem;
 }
 
+.search-card > form input,
 .help > form input
 {
 	padding: 0.4rem 1rem;
 	font-size: 0.9rem;
 }
 
+.search-card > .large-card,
 .help > .large-card
 {
 	padding: 1rem;
+}
+
+.searchResults
+{
+	grid-column: 1 / -1;
+	display: grid;
+	gap: 1rem;
+}
+
+.searchResults > .large-card
+{
+	padding:1rem;
 }
 
 .profile-header{
@@ -482,6 +499,14 @@ footer{
 		grid-column: 1 / -1;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.searchResults
+	{
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: 1fr;
 		gap: 1rem;
 	}
 
