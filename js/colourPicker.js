@@ -34,6 +34,11 @@ const _colourReset = false;
         <input type="color" name="clr-600" id="clr-600" data-id="6">
     </span>
 
+    <span>
+        <label for="clr-700" class="">--Clr-700</label>
+        <input type="color" name="clr-700" id="clr-700" data-id="7">
+    </span>
+
     <button id="palette-reset">RESET</button>
 
     <span class="flex-row">
@@ -92,7 +97,8 @@ const LightColourNames = [
                             "--clr-light-300",
                             "--clr-light-400",
                             "--clr-light-500",
-                            "--clr-light-600"
+                            "--clr-light-600",
+                            "--clr-light-700"
                             ];
 
 const DarkColourNames = [  
@@ -101,7 +107,8 @@ const DarkColourNames = [
                             "--clr-dark-300",
                             "--clr-dark-400",
                             "--clr-dark-500",
-                            "--clr-dark-600"
+                            "--clr-dark-600",
+                            "--clr-dark-700"
                             ];
 const palettes = [
                 [],[],[],[]
@@ -113,7 +120,8 @@ palettes[1]["Light"] = {
     [LightColourNames[2]]: "hsl(0 0% 65%)",
     [LightColourNames[3]]: "hsl(0 0% 50%)",
     [LightColourNames[4]]: "hsl(0 0% 35%)",
-    [LightColourNames[5]]: "hsl(0 0% 20%)"
+    [LightColourNames[5]]: "hsl(0 0% 20%)",
+    [LightColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 palettes[1]["Dark"] = {
@@ -123,6 +131,7 @@ palettes[1]["Dark"] = {
     [DarkColourNames[3]]: "hsl(0 0% 30%)",
     [DarkColourNames[4]]: "hsl(0 0% 15%)",
     [DarkColourNames[5]]: "hsl(0 0% 20%)",
+    [DarkColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 palettes[2]["Light"] = {
@@ -131,7 +140,8 @@ palettes[2]["Light"] = {
     [LightColourNames[2]]: "hsl(208 64% 60%)",
     [LightColourNames[3]]: "hsl(0 0% 20%)",
     [LightColourNames[4]]: "hsl(208 74% 52%)",
-    [LightColourNames[5]]: "hsl(211 100% 23%)"
+    [LightColourNames[5]]: "hsl(211 100% 23%)",
+    [LightColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 palettes[2]["Dark"] = {
@@ -141,6 +151,7 @@ palettes[2]["Dark"] = {
     [DarkColourNames[0]]: "hsl(0 0% 20%)",
     [DarkColourNames[2]]: "hsl(208 74% 32%)",
     [DarkColourNames[4]]: "hsl(211 60% 23%)",
+    [DarkColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 palettes[3]["Light"] = {
@@ -149,7 +160,8 @@ palettes[3]["Light"] = {
     [LightColourNames[2]]: "hsl(208 44% 60%)",
     [LightColourNames[4]]: "hsl(208 56% 19%)",
     [LightColourNames[3]]: "hsl(201 27% 79%)",
-    [LightColourNames[5]]: "hsl(202 53% 31%)"
+    [LightColourNames[5]]: "hsl(202 53% 31%)",
+    [LightColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 palettes[3]["Dark"] = {
@@ -159,6 +171,7 @@ palettes[3]["Dark"] = {
     [DarkColourNames[2]]: "hsl(208 56% 19%)",
     [DarkColourNames[4]]: "hsl(201 27% 29%)",
     [DarkColourNames[0]]: "hsl(202 53% 31%)",
+    [DarkColourNames[6]]: "hsl(202 53% 100%)"
 }
 
 function NewColourPicked(e)
@@ -211,6 +224,7 @@ const LoadPalette = function(palette)
     colorForm.elements.namedItem("clr-400").value = HSLtoHex(palette[colorName[3]]);
     colorForm.elements.namedItem("clr-500").value = HSLtoHex(palette[colorName[4]]);
     colorForm.elements.namedItem("clr-600").value = HSLtoHex(palette[colorName[5]]);
+    colorForm.elements.namedItem("clr-700").value = HSLtoHex(palette[colorName[6]]);
 
     console.log("------------loading palette")
     for(const clrName of colorName)
@@ -255,7 +269,8 @@ const CurrentPaletteJson = function()
                 [colorName[2]]:colorForm.elements.namedItem("clr-300").value,
                 [colorName[3]]:colorForm.elements.namedItem("clr-400").value,
                 [colorName[4]]:colorForm.elements.namedItem("clr-500").value,
-                [colorName[5]]:colorForm.elements.namedItem("clr-600").value
+                [colorName[5]]:colorForm.elements.namedItem("clr-600").value,
+                [colorName[6]]:colorForm.elements.namedItem("clr-700").value
             };
 }
 

@@ -55,7 +55,7 @@ body
 .update-card,
 .social-card{
     width:100%;
-    background: var(--clr-200);
+    background: var(--clr-700);
     border-radius: 0.3rem;
     grid-column:auto / span 1;
     overflow:hidden;
