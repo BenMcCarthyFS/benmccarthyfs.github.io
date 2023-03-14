@@ -2,16 +2,6 @@
     --clr-button: var(--clr-200);
 }
 
-*
-{
-    transition: background-color 300ms ease;
-}
-
-body
-{
-    background: linear-gradient(var(--clr-300), var(--clr-200) 350px) ; 
-}
-
 
 .profile-activity,
 .profile-stats{

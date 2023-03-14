@@ -16,6 +16,18 @@
 	--clr-dark-600: hsl(0 0% 20%);
 	--clr-dark-700: hsl(0 0% 20%);
 
+	--clr-primary-300: hsl(0 0% 0%);
+	--clr-primary-400: hsl(0 0% 0%);
+	--clr-primary-500: hsl(0 0% 0%);
+
+	--clr-secondary-300: hsl(0 0% 0%);
+	--clr-secondary-400: hsl(0 0% 0%);
+	--clr-secondary-500: hsl(0 0% 0%);
+
+	--clr-accent-300: hsl(0 0% 0%);
+	--clr-accent-400: hsl(0 0% 0%);
+	--clr-accent-500: hsl(0 0% 0%);
+
 	--clr-100: var(--clr-light-100);
 	--clr-200: var(--clr-light-200);
 	--clr-300: var(--clr-light-300);
@@ -26,8 +38,8 @@
 
 	--primary-text-colour: #0094ff;
 
-	--fc-light-400: var(--clr-200);
-	--fc-light-300: var(--clr-100);
+	--fc-light-400: var(--clr-600);
+	--fc-light-300: var(--clr-500);
 
 	--fc-dark-400: var(--clr-600);
 	--fc-dark-300: var(--clr-500);

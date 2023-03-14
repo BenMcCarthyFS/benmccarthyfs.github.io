@@ -119,6 +119,13 @@ input[type="password"]
 
 @media screen and (min-width:992px){
 
+    
+
+    .loginPage
+    {
+        padding-top:100px;
+    }
+
     body{        
         --top-nav-offset: 0;
     }

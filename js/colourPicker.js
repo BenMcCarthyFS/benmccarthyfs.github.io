@@ -91,6 +91,9 @@ function PaletteReset(e)
     LoadPalette(savedPalette);
 }
 
+const LightColourPattern = "--clr-light-*00";
+const DarkColourPattern = "--clr-light-*00";
+
 const LightColourNames = [  
                             "--clr-light-100",
                             "--clr-light-200",
@@ -167,11 +170,11 @@ palettes[3]["Light"] = {
 palettes[3]["Dark"] = {
     [DarkColourNames[3]]: "hsl(0 0% 100%)",
     [DarkColourNames[5]]: "hsl(53 12% 83%)",
-    [DarkColourNames[1]]: "hsl(208 64% 20%)",
-    [DarkColourNames[2]]: "hsl(208 56% 19%)",
-    [DarkColourNames[4]]: "hsl(201 27% 29%)",
+    [DarkColourNames[1]]: "hsl(194 14% 22%)",
+    [DarkColourNames[2]]: "hsl(208 56% 53%)",
+    [DarkColourNames[4]]: "hsl(210 22% 34%)",
     [DarkColourNames[0]]: "hsl(202 53% 31%)",
-    [DarkColourNames[6]]: "hsl(202 53% 100%)"
+    [DarkColourNames[6]]: "hsl(41 100% 53%)"
 }
 
 function NewColourPicked(e)

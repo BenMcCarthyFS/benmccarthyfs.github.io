@@ -38,7 +38,7 @@
     </a>
     <a href="index.html" class="font-dark">
         <div data-name='logout'>
-        <i class="fa-solid fa-envelope fa-xl fa-fw"></i>
+        <i class="fa-solid fa-right-from-bracket fa-xl fa-fw"></i>
         <p>Logout</p>
         </div>
     </a>
